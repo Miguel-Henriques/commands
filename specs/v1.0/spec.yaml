@@ -5,13 +5,16 @@
 # 
 # Commands:
 # 
-#   # Required. Used to reference the command in Command chains.
+#   # Required. Used to reference the command in Command chains.Max 30 characters. Snake case notation. No spaces or special characters allowed.
 #   <Command ID>:
 # 
-#     # Required. Used to display the command in the TUI.
-#     Name: <User friendly name of the command>
+#     # Optional. Commands indexes alises give you alternative search keywords to find your commands. Max 10 aliases. No spaces or special characters allowed.
+#     Alias: 
+#      - <alias>
+#      - <alias>
+#      - ...
 #
-#     # Optional. Used to display the command description in the TUI.
+#     # Optional. Used to display the command description in the TUI. Max 100 characters.
 #     Description: <User friendly description of the command>
 #
 #     # Optional config that defines run conditions for Commands to automatically detect and run other commands.

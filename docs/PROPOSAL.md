@@ -37,18 +37,19 @@ Version: 1.0
 Commands:
 
   terraform_init_backend:
-    Name: Terraform init - Backend
     Description: Initialize the Terraform backend for the current environment
     Command: terraform chdir init -backend-config="./environments/$TARGET_ENV/config.tfbackend"
 ```
 
-3. Run
+3. Run `commands`
 
 ```sh
 commands
-
-# // WIP
 ```
+
+![UX concept v1](media/ux-concept-v1.png)
+
+You must run Commands in the path where your `commands.yaml` is. Executed commands run relative to that path. 
 
 See [spec](#spec) for the full commands file spec. 
 

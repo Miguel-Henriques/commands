@@ -33,3 +33,11 @@ Variants:
   DEV:
     TARGET: dev.env
 ```
+
+### Command Name
+
+Required. Used to display the command in the TUI. Max 40 characters. No spaces or special characters allowed.
+
+```yaml
+Name: <User friendly name of the command>
+```

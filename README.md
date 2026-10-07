@@ -4,4 +4,4 @@
 
 Catalogued commands from your terminal.
 
-See [PROPOSAL.md] for the initial proposal document.
+See [PROPOSAL.md](/docs/PROPOSAL.md) for the initial proposal document.

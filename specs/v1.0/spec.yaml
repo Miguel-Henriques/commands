@@ -1,0 +1,39 @@
+# Commands Spec v1.0
+#
+# You should create a `commands.yaml` file at the root of your project that adheres to this spec for your commands
+# to be correctly interpreted by Commands.
+# 
+# Commands:
+# 
+#   # Required. Used to reference the command in Command chains.
+#   <Command ID>:
+# 
+#     # Required. Used to display the command in the TUI.
+#     Name: <User friendly name of the command>
+#
+#     # Optional. Used to display the command description in the TUI.
+#     Description: <User friendly description of the command>
+#
+#     # Optional config that defines run conditions for Commands to automatically detect and run other commands.
+#     # If no condition is provided, the command will run unconditionally.
+#     # 
+#     # Possible conditions:
+#     #  - OutRegex("output regex"), e.g. OutRegex("Error: Backend initialization required, please run "terraform init"")
+#     #  - FileChanged(<glob patterns>), e.g. FileChanged(*.tsx, src/config/**/*.ts, *route.ts)
+#     #  - Git operations, e.g. Git.Commit
+#     When: <Condition>
+#
+#     # Commands can be simple or defined as chains of multiple individual commands that execute in a given order.
+#     # A potential use case is describing a local deployment or a CI pipeline.
+#     # Can reference other commands by their ID.
+#     # 
+#     Command: <Command to run>
+#     Command:
+#      - <Command to run>
+#      - Commands.<Command ID>
+#      - ...
+# 
+#     Logical container for grouping commands together in the TUI for easier discovery.
+#     Groups:
+#      - <Group name>
+#      - ...

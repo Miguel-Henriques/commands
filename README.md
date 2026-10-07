@@ -1,2 +1,7 @@
 # commands
-Catalogued commands from your terminal
+
+> Disclaimer: this project is currently under early stage development and is subject to structural changes.
+
+Catalogued commands from your terminal.
+
+See [PROPOSAL.md] for the initial proposal document.

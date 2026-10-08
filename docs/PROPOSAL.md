@@ -59,7 +59,26 @@ See [spec.yaml](../specs/v1.0/spec.yaml) for the latest official Commands specif
 
 ## FAQ
 
-### How does it compare to zsh aliases ?
+### How does it compare to aliases ?
 
-With aliases you still have to remember the command alias or be inspecting the `.zsh` file everytime you need to look it up.
-Commands is designed for collaborative work, and targeted on a per-project basis. Commands are not global.
+Commands offers the same functionality of aliases and beyond.
+
+What I found is that with aliases you still have to remember the command alias or be inspecting the `.zsh` file everytime you need to look it up. Commands is there to help you when you don't remember what the command or alias is.
+
+Secondly, Commands is designed for collaborative work, and targeted (scoped) on a per-project basis. This isolation means the same command identifier can execute different commands, saving you from ugly workarounds you'd need for globally-scoped command aliases:
+
+```sh
+# with Commands
+
+# ~/projects/my_project/commands.yaml
+# ~/projects/my_other_project/commands.yaml
+tf_init
+
+# with global aliases
+
+# ~/aliases
+tf_init_my_project
+tf_init_my_other_project
+```
+
+It also means that your commands are stored alongside your project in version control, making sharing easier and providing a backup path for restoring your working environment.

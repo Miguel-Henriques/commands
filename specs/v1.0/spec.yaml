@@ -1,4 +1,7 @@
-# Commands Spec v1.0
+# Commands Spec
+#
+# The version of the spec you are using.
+# Version: 1.0
 #
 # You should create a `commands.yaml` file at the root of your project that adheres to this spec for your commands
 # to be correctly interpreted by Commands.
